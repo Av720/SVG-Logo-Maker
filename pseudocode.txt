@@ -1,20 +1,23 @@
-what will i create to kick off the questions to the user???
+-what will i create to kick off the questions to the user???
+1. enter your text up to 3 characters
+2. Enter a color of hexadecimal number
+3. Choose a shape image you would like to use ? 
+
+-what does an svg element look like????
 
 
-what does an svg element look like????
-
-
-how can i modularize my code???
+-how can i modularize my code???
 
 
 //App Structure
-Class SVG - 2 keys - text and shape empty strings,  render method, setText, setShape 
+-Class SVG - 2 keys - text and shape empty strings,  render method, setText, setShape 
+ this.textElement = ''
+ this.shapeElement = ''
+
+-Class Shape is the parent 1 key - color, setColor method
 
 
-Class Shape is the parent 1 key - color, setColor method
-
-
-Class circle, Class triangle, Class square extend from Shape -- all return template strings of svg element shape
+-Class circle, Class triangle, Class square extend from Shape -- all return template strings of svg element shape
 
 
 //Test Structure
