@@ -14,5 +14,35 @@ class Svg {
   }
   render() {
     return ``
-  }
+    }
+    
+// 
+
+
+
+
 }
+
+const questions = [
+    {
+        type: "input",
+        name: "text",
+        message: ":",
+    },
+    {
+        type: "input",
+        name: "text-color",
+        message: ":",
+    },
+    {
+        type: "input",
+        name: "shape",
+        message: ":",
+    },
+    {
+        type: "list",
+        name: "shape",
+        message: "",
+        choices: ["Circle", "Square", "Triangle"],
+    },
+];
