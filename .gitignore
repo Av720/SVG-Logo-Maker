@@ -1,0 +1,5 @@
+# this will ignore the files as recommended from the dist
+
+.DS_store 
+DS_store 
+
