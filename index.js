@@ -3,9 +3,11 @@
 //create a variable for the shapes
 // create a class for the SVG file
 
-const mainFile = require();
-const inquirer = require("inquirer");
+const mainFile = require('./node_modules/graceful-fs/graceful-fs')
+const inquirer = require('inquirer');
 const { Square, Triangle, Circle } = require("./lib/shapes");
+const fs = require('fs')
+// const { writeFile } = require("fs").promises
 
 class Svg {
   constructor() {
@@ -13,36 +15,68 @@ class Svg {
     this.shape = "";
   }
   render() {
-    return ``
+      return `<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" </svg>`
     }
-    
-// 
 
+    setText(text, color) {
+        this.text = `<text x="200" y="200" font-size="40" text-anchor="middle" fill="${color}">${text}</text>`
+}
 
-
+    setShape(shape) { 
+        this.shape = shape.render()
+    }
 
 }
 
+// create 4 questions for the user prompt
 const questions = [
     {
         type: "input",
         name: "text",
-        message: ":",
+        message: "Enter a text up to (3) characters:",
     },
     {
         type: "input",
-        name: "text-color",
-        message: ":",
+        name: "color",
+        message: "Enter a text color for your logo: ",
     },
     {
         type: "input",
-        name: "shape",
-        message: ":",
+        name: "shape-color",
+        message: "Enter a shape color for your logo:  ",
     },
     {
         type: "list",
         name: "shape",
-        message: "",
+        message: "Choose a shape for your logo: ",
         choices: ["Circle", "Square", "Triangle"],
     },
 ];
+
+
+
+function writeToFile(fileName, data) {
+
+    filesystem.writeFile(fileName, data, function (err) {
+        if (err) {
+            return console.log(err);
+        }
+        console.log("Success! you have generated a logo!");
+    });
+}
+    async function init() {
+        console.log("Starting init");
+        var svgString = "";
+        var svg_file = "logo.svg";
+
+        // Prompt the user for answers
+        const answers = await inquirer.prompt(questions);
+
+
+
+    
+    }
+    
+
+// Function call to initialize app
+init();
