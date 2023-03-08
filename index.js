@@ -3,11 +3,11 @@
 //create a variable for the shapes
 // create a class for the SVG file
 
-const mainFile = require('./node_modules/graceful-fs/graceful-fs')
+// const mainFile = require('./node_modules/graceful-fs/graceful-fs')
 const inquirer = require('inquirer');
 const { Square, Triangle, Circle } = require("./lib/shapes");
 const fs = require('fs')
-// const { writeFile } = require("fs").promises
+const { writeFileSync } = require("fs")
 
 class Svg {
   constructor() {
@@ -15,7 +15,10 @@ class Svg {
     this.shape = "";
   }
   render() {
-      return `<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" </svg>`
+      return `<svg  width="300" height="200"> 
+      ${this.shape}
+      ${this.text}
+      </svg>`
     }
 
     setText(text, color) {
@@ -57,13 +60,10 @@ const questions = [
 
 function writeToFile(fileName, data) {
 
-    filesystem.writeFile(fileName, data, function (err) {
-        if (err) {
-            return console.log(err);
-        }
-        console.log("Success! you have generated a logo!");
-    });
-}
+    writeFileSync(fileName, data)  
+    
+    }
+
 
 async function init() {
 
@@ -74,7 +74,21 @@ async function init() {
         // Prompt the user for answers
         const userAnswers = await inquirer.prompt(questions);
 
-console.log(userAnswers);
+    
+        // if and else statement
+        // if shape pick > text color, shape color, insert 
+    
+    
+    
+    
+    
+    
+    console.log(userAnswers);
+    
+
+
+
+
 
     
     }
