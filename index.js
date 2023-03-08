@@ -64,15 +64,17 @@ function writeToFile(fileName, data) {
         console.log("Success! you have generated a logo!");
     });
 }
-    async function init() {
+
+async function init() {
+
         console.log("Starting init");
-        var svgString = "";
-        var svg_file = "logo.svg";
+        const mainstring = "";
+        const svgFile = "logo.svg";
 
         // Prompt the user for answers
-        const answers = await inquirer.prompt(questions);
+        const userAnswers = await inquirer.prompt(questions);
 
-
+console.log(userAnswers);
 
     
     }
