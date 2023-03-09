@@ -23,7 +23,7 @@ class Svg {
     }
 
     setText(text, color) {
-        this.text = `<text x="200" y="200" font-size="40" text-anchor="middle" fill="${color}">${text}</text>`;
+        this.text = `<text x="150" y="125" font-size="50" text-anchor="middle" fill="${color}">${text}</text>`;
     }
 
     setShape(shape) {
