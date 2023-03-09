@@ -39,7 +39,7 @@ const questions = [
   },
   {
     type: "input",
-    name: "color",
+    name: "txt-color",
     message: "Enter a text color for your logo: ",
   },
   {
@@ -67,23 +67,69 @@ async function init() {
   // Prompt the user for answers
   const userAnswers = await inquirer.prompt(questions);
 
-  console.log(userAnswers);
+//   console.log(userAnswers);
 
-  // if and else statement
-  // if shape pick > text color, shape color, insert
+  // Beginning of if and else statement
 
-  // text if and else statement
-// create a variable to store the users text input 
-    
-  const userTextInput = "";
+  // create a variable to store the users text input
+//   const userTextInput = "";
+//     const textColorInput = "";
+//     const shapeInput = "";
+//     const shapeColor = "";
 
-  if (userAnswers.text.length > 0 && userAnswers.text.length < 4) {
-    userTextInput = userAnswers.text;
+
+var  userTextInput = "";
+
+  // this if else statement will validate the user input for characters size
+    if (userAnswers.text.length > 0 && userAnswers.text.length < 4) {
+
+        userTextInput = userAnswers.text;
+
+        console.log(userTextInput);
+        
   } else {
-    console.log("Please try again and enter up to 3 characters only! ");
+        console.log("Please try again and enter up to 3 characters only! ");
+        
+        return;
   }
+    // console.log(userTextInput) // this will log the users text input 
 
-  return;
+  // create a variable to store the users text color input
+   var textColorInput = userAnswers["txt-color"];
+    console.log(textColorInput);
+    
+  //create a varibale for the shape type input 
+    var userShapeType = userAnswers["shape"]
+    console.log(userShapeType);
+    
+   // create a variable for the shape color input 
+    var userShapeColor = userAnswers["shape-color"]
+    console.log(userShapeColor)
+
+ //if and else statement for the user shape type 
+    let mainShape;
+
+    if (userShapeType === "Square") {
+        mainShape = new Square();
+    } else if (userShapeType === "Circle") {
+        mainShape = new Circle();
+    } else if (userShapeType === "Triangle") {
+        mainShape = new Triangle();
+    } else {
+        
+    }
+
+    //adding shape to the svg class
+
+
+    const svg = new Svg();
+
+    svg.setText(userTextInput, textColorInput);
+    svg.setShape(userShapeType)
+    mainstring = svg.render
+
+    writeToFile(svgFile, mainstring)
+
 }
 
 // Function call to initialize app
