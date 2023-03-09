@@ -24,6 +24,11 @@ npm i
 You must answer all the required prompts, see video for reference: 
 
 
+
+https://user-images.githubusercontent.com/120581801/223940204-44f6c424-ff7d-4e3b-a28d-2cac0fc1128d.mp4
+
+
+
 ## License
     This application is covered by the MIT license.
 
