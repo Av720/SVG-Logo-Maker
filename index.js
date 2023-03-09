@@ -125,8 +125,6 @@ async function init() {
     mainShape.setColor(userShapeColor)
 
     //adding shape to the svg class
-
-
     var svg = new Svg();
 
     svg.setText(userTextInput, textColorInput);
