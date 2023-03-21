@@ -23,11 +23,13 @@ npm i
 ## Usage 
 You must answer all the required prompts, see video for reference: 
 
+Video #1 (Svg Generator and SVG preview) 
 
+https://user-images.githubusercontent.com/120581801/226522206-03b1bf34-1f02-420a-9f2f-83b6687802b2.mp4
 
-https://user-images.githubusercontent.com/120581801/223940204-44f6c424-ff7d-4e3b-a28d-2cac0fc1128d.mp4
+Video #2 (Svg generator testing) 
 
-
+https://user-images.githubusercontent.com/120581801/226522276-df0cfeb3-f343-4cb9-b647-13076b528b66.mp4
 
 ## License
     This application is covered by the MIT license.
